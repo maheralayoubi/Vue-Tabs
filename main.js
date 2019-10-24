@@ -4,10 +4,7 @@ Vue.component('tabs', {
    <div>
         <div class="tabs">
             <ul>
-            <li class="is-active"><a>Pictures</a></li>
-            <li><a>Music</a></li>
-            <li><a>Videos</a></li>
-            <li><a>Documents</a></li>
+                <li v-for="tab in tabs">{{ tab.name }}</li>
             </ul>
         </div>
 
@@ -18,9 +15,16 @@ Vue.component('tabs', {
 
     `,
 
-    mounted() {
+    data() {
+
+        return { 
+            tabs: []
+      };
+    },
+
+    created() {
         
-        console.log(this.$children);
+        this.tabs = this.$children;
         
     }
 
@@ -32,7 +36,12 @@ Vue.component('tab', {
 
     <div><slot></slot></div>
     
-    `
+    `,
+
+    props: {
+        
+        name: { required: true }
+    }
 
 });
 
