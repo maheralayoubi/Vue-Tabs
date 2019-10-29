@@ -51,9 +51,3 @@ new Vue({
 
 
 
-var a = 'abc';
-
-var b = 'abc';
-
-console.log(a == b);
-
