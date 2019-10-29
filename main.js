@@ -48,3 +48,12 @@ Vue.component('tab', {
 new Vue({
     el: '#root'
 });
+
+
+
+var a = 'abc';
+
+var b = 'abc';
+
+console.log(a == b);
+
