@@ -51,13 +51,4 @@ new Vue({
 
 
 
-var a = ['will', 'change', 'value'];
-var b = a;
-var c = a.slice();
-
-a.push('make')
-
-console.log(b);
-
-
 
