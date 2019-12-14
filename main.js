@@ -21,18 +21,7 @@ Vue.component('tabs', {
 
     `,
 
-    data() {
 
-        return { 
-            tabs: []
-      };
-    },
-
-    created() {
-        
-        this.tabs = this.$children;
-        
-    },
 
     methods: {
 
@@ -53,11 +42,11 @@ Vue.component('tab', {
     template: `
 
     <div v-show="isActive"><slot></slot></div>
-    
+
     `,
 
     props: {
-        
+
         name: { required: true },
 
         selected: { default: false }
@@ -79,7 +68,3 @@ Vue.component('tab', {
 new Vue({
     el: '#root'
 });
-
-
-
-
